@@ -1,0 +1,37 @@
+{
+  "authors": [
+    {
+      "name": "Maya Angelou",
+      "email": "maya@maya.com",
+      "id": "1"
+    },
+    {
+      "name": "Grace Hopper",
+      "email": "grace@grace.com",
+      "id": "2"
+    },
+    {
+      "name": "Mark Twain",
+      "email": "mark@mark.com",
+      "id": "3"
+    }
+  ],
+  "recipients": [
+    {
+      "name": "Maya Angelou",
+      "email": "maya@maya.com",
+      "id": "1"
+    },
+    {
+      "name": "Grace Hopper",
+      "email": "grace@grace.com",
+      "id": "2"
+    },
+    {
+      "name": "Mark Twain",
+      "email": "mark@mark.com",
+      "id": "3"
+    }
+  ],
+  "letters": []
+}
