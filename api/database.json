@@ -16,6 +16,7 @@
       "id": "3"
     }
   ],
+
   "recipients": [
     {
       "name": "Maya Angelou",
@@ -33,5 +34,29 @@
       "id": "3"
     }
   ],
+
+  "topics": [
+    {
+      "name": "Business",
+      "id": "1"
+    },
+    {
+      "name": "Friendly",
+      "id": "2"
+    },
+    {
+      "name": "Family",
+      "id": "3"
+    },
+    {
+      "name": "Congratulations",
+      "id": "4"
+    },
+    {
+      "name": "Condolences",
+      "id": "5"
+    }
+  ],
+  
   "letters": []
 }
