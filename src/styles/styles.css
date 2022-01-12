@@ -1,3 +1,10 @@
+
+
 #author-names {
   width: 60rem; border: 1px solid #999999; padding: 5
+}
+
+textarea {
+  width: 60rem; border: 1px solid #999999; padding: 5;
+  height: 20rem;
 }

@@ -2,7 +2,15 @@ import { getTopics } from './dataAccess.js'
 
 // const mainContainer = document.querySelector("#container")
 
-// Click event goes here?
+// mainContainer.addEventListener("click", clickEvent => {
+//   if (clickEvent.target.id === "sendLetter") {
+//       // Get what the user typed into the form fields
+//       // Google how to use a query selector with a drop down
+//       // create a fetch call
+//       // invoke fetch call
+//       // Send the data to the API for permanent storage
+//   }
+// })
 
 
 
@@ -11,9 +19,9 @@ export const InputForm = () => {
 
       // add author w/ dropdown menu X
       // add a text area for letter X
-      // display individual topic names 
+      // display individual topic names X
       // add recipient w/ drop down menu X
-      // button
+      // button X 
       // save letter
           // add click event
               // click send letter button
@@ -21,7 +29,7 @@ export const InputForm = () => {
               // save letter to database aka invoking the function that saves the letter
 
     let html = `
-      <div class="field">
+      <div class="authors">
         <label class="label" for="author">Author</label>
         <select name="author-names" id="author-names">
           <option value="maya">Maya Angelou</option>
@@ -33,10 +41,10 @@ export const InputForm = () => {
         <label class="label" for="letter">Letter</label>
         <textarea></textarea>
       </div>
-      <div class="field">
+      <div class="radio">
           <label class="label" for="topics">Topics</label>
           ${topics.map(topic => {
-              return `<input type="radio" name="topicDescription" class="input">Family</input>`
+              return `<input type="radio" name="topicDescription" class="input" value=${topic.name}>${topic.name}</input>`
           }).join("")}
       </div>
       <div class="field">
