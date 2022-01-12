@@ -1,32 +1,34 @@
 import { getTopics } from './dataAccess.js'
 
-// const mainContainer = document.querySelector("#container")
+const mainContainer = document.querySelector("#container")
 
-// mainContainer.addEventListener("click", clickEvent => {
-//   if (clickEvent.target.id === "sendLetter") {
-//       // Get what the user typed into the form fields
-//       // Google how to use a query selector with a drop down
-//       // create a fetch call
-//       // invoke fetch call
-//       // Send the data to the API for permanent storage
-//   }
-// })
+mainContainer.addEventListener("click", clickEvent => {
+  if (clickEvent.target.id === "sendLetter") {
+      // Get what the user typed into the form fields
+      // Google how to use a query selector with a drop down
+      const authorName = document.querySelector("#author-names select").value
+      const recipientName = document.querySelector("#author-names select").value
+      const letterTopic = document.querySelector("#author-names select").value
+      const letterBody = document.querySelector("#author-names select").value
 
+      const dataToSendToAPI = {
+        author: authorName,
+        recipient: recipientName,
+        topic: letterTopic,
+        letter: letterBody
+    }
+     
+      // Send the data to the API for permanent storage
+      sendLetter(dataToSendToAPI)
 
+  }
+})
+
+ // create a fetch call
+      // invoke fetch call
 
 export const InputForm = () => {
     const topics = getTopics()  
-
-      // add author w/ dropdown menu X
-      // add a text area for letter X
-      // display individual topic names X
-      // add recipient w/ drop down menu X
-      // button X 
-      // save letter
-          // add click event
-              // click send letter button
-              // get the info (author, recipient, topic, letter) from the dom (what we see in the browser)
-              // save letter to database aka invoking the function that saves the letter
 
     let html = `
       <div class="authors">
