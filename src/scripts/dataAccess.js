@@ -19,8 +19,8 @@ export const getTopics = () => {
   return applicationState.topics.map(topic => ({ ...topic }))
 }
 
-// export const sendRequest = (userServiceRequest) => {
-//   const fetchOptions = {
+// export const sendTopics = (userServiceRequest) => {
+//   const fetchTopics = {
 //       method: "POST",
 //       headers: {
 //           "Content-Type": "application/json"
