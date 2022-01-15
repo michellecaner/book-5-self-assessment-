@@ -7,9 +7,9 @@ mainContainer.addEventListener("click", clickEvent => {
       // Get what the user typed into the form fields
       // Google how to use a query selector with a drop down
       const authorName = document.querySelector("#author-names").value
-      const letterBody = document.querySelector("#author-names").value
-      const recipientName = document.querySelector("#author-names").value
-      const letterTopic = document.querySelector("#author-names").value
+      const letterBody = document.querySelector("#letter-body").value
+      const recipientName = document.querySelector("#recipient-names").value
+      const letterTopic = document.querySelector("#letter-topic").value
 
       const dataToSendToAPI = {
         author: authorName,
@@ -41,17 +41,17 @@ export const InputForm = () => {
       </div>
       <div class="field">
         <label class="label" for="letter">Letter</label>
-        <textarea></textarea>
+        <textarea id="letter-body"></textarea>
       </div>
       <div class="radio">
           <label class="label" for="topics">Topics</label>
           ${topics.map(topic => {
-              return `<input type="radio" name="topicDescription" class="input" value=${topic.name}>${topic.name}</input>`
+              return `<input type="radio" name="topicDescription" id="letter-topic" value=${topic.name}>${topic.name}</input>`
           }).join("")}
       </div>
       <div class="field">
       <label class="label" for="recipient">Recipient</label>
-      <select name="author-names" id="author-names">
+      <select name="author-names" id="recipient-names">
         <option value="maya">Maya Angelou</option>
         <option value="grace">Grace Hopper</option>
         <option value="mark">Mark Twain</option>
