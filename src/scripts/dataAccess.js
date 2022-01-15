@@ -1,9 +1,11 @@
 const applicationState = {
-  topics: []
+  topics: [],
+  letters: []
 }
 
 const API = "http://localhost:8088"
 
+// Gets the topics from the API
 export const fetchTopics = () => {
     return fetch(`${API}/topics`)
         .then(response => response.json())
@@ -15,31 +17,41 @@ export const fetchTopics = () => {
         )
 }
 
+// Makes a copy of the topics array
 export const getTopics = () => {
   return applicationState.topics.map(topic => ({ ...topic }))
 }
 
-// export const sendTopics = (userServiceRequest) => {
-//   const fetchTopics = {
-//       method: "POST",
-//       headers: {
-//           "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify(userServiceRequest)
-//   }
+// Gets the letters from the API
+export const fetchLetters = () => {
+  return fetch(`${API}/letters`)
+      .then(response => response.json())
+      .then(
+          (letters) => {
+              // Store the external state in application state
+              applicationState.letters = letters
+          }
+      )
+}
 
-//   return fetch(`${API}/requests`, fetchOptions)
-//         .then(response => response.json())
-//         .then(() => {
-//             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
-//         })
-//     }
+// Makes a copy of the letters array
+export const getLetters = () => {
+return applicationState.letters.map(letter => ({ ...letter }))
+}
 
-//     export const deleteRequest = (id) => {
-//         return fetch(`${API}/requests/${id}`, { method: "DELETE" })
-//             .then(
-//                 () => {
-//                     mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
-//                 }
-    //         )
-    // }
+export const sendLetter = (authorLetter) => {
+  const fetchOptions = {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      },
+      body: JSON.stringify(authorLetter)
+  }
+
+  return fetch(`${API}/letters`, fetchOptions)
+    .then(response => response.json())
+    .then(() => {
+      container.dispatchEvent(new CustomEvent("stateChanged"))
+    })
+}
+  

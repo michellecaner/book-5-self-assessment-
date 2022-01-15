@@ -16,7 +16,6 @@
       "id": "3"
     }
   ],
-
   "recipients": [
     {
       "name": "Maya Angelou",
@@ -34,7 +33,6 @@
       "id": "3"
     }
   ],
-
   "topics": [
     {
       "name": "Business",
@@ -57,6 +55,13 @@
       "id": "5"
     }
   ],
-  
-  "letters": []
+  "letters": [
+    {
+      "author": "grace",
+      "letter": "grace",
+      "recipient": "grace",
+      "topic": "grace",
+      "id": 1
+    }
+  ]
 }

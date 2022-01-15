@@ -1,4 +1,4 @@
-import { getTopics } from './dataAccess.js'
+import { getTopics, sendLetter } from './dataAccess.js'
 
 const mainContainer = document.querySelector("#container")
 
@@ -6,16 +6,16 @@ mainContainer.addEventListener("click", clickEvent => {
   if (clickEvent.target.id === "sendLetter") {
       // Get what the user typed into the form fields
       // Google how to use a query selector with a drop down
-      const authorName = document.querySelector("#author-names select").value
-      const recipientName = document.querySelector("#author-names select").value
-      const letterTopic = document.querySelector("#author-names select").value
-      const letterBody = document.querySelector("#author-names select").value
+      const authorName = document.querySelector("#author-names").value
+      const letterBody = document.querySelector("#author-names").value
+      const recipientName = document.querySelector("#author-names").value
+      const letterTopic = document.querySelector("#author-names").value
 
       const dataToSendToAPI = {
         author: authorName,
+        letter: letterBody,
         recipient: recipientName,
-        topic: letterTopic,
-        letter: letterBody
+        topic: letterTopic
     }
      
       // Send the data to the API for permanent storage
